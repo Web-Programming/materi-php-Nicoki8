@@ -10,9 +10,9 @@ Route::get('/', function () {
 Route::get('/Home', function () {
     return view('beranda',
     [
-        'name'=> 'Zanesen',
-        'email' => 'Zanesen_2327240066@mhs.mdp.ac.id',
-        'alamat'=> 'Lorong Kiecong No 806'
+        'name'=> 'Nico',
+        'email' => 'nico.wijaya2005@gmail.com',
+        'alamat'=> 'Palembang'
     ]);
 });
 
