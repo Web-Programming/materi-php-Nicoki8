@@ -2,20 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prodi;
 use Illuminate\Http\Request;
-use Symfony\Contracts\Service\Attribute\Required;
 
-class ProdiController extends Controller
+class MahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index() {
-        $listprodi = Prodi::get();
-        return view("prodi.index", 
-        ['listprodi' => $listprodi]
-        );
+    public function index()
+    {
+        //
     }
 
     /**
@@ -23,31 +19,15 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        return view("prodi.create");
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-
     {
-        $validateData = $request->validate(
-            rules:{
-                'nama' =>'Required|min:5|max20',
-                'kode_prodi' =>'required |min:2|max:2'
-            }
-        );
-
-        $prodi = new Prodi();
-        $prodi->nama = $validateData('nama'); //$request->nama
-        $prodi ->kode_prodi = $validateData('kode_prodi');
-        $prodi->save();
-
-
-        return redirect("prodi") ->with("status",
-        "Data Program Studi berhasil disimpan")
-
+        //
     }
 
     /**
