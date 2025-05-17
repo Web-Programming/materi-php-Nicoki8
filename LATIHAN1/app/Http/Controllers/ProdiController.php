@@ -32,7 +32,7 @@ class ProdiController extends Controller
     public function store(Request $request)
 
     {
-        $validateData = $request->validate(
+         $validateData = $request->validate(
             rules:{
                 'nama' =>'Required|min:5|max20',
                 'kode_prodi' =>'required |min:2|max:2'
@@ -47,6 +47,7 @@ class ProdiController extends Controller
 
         return redirect("prodi") ->with("status",
         "Data Program Studi berhasil disimpan")
+       
 
     }
 
